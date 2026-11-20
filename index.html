@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mocap — Stylized 3D Game Assets &amp; Unity Tools</title>
-  <meta name="description" content="Mocap creates game-ready stylized low-poly 3D environments, modular kits, and Unity Editor tools for indie developers and studios." />
+  <meta name="description"
+    content="Mocap creates game-ready stylized low-poly 3D environments, modular kits, and Unity Editor tools for indie developers and studios." />
   <style>
     :root {
       --bg: #0f1318;
@@ -21,8 +23,16 @@
       --max-w: 1120px;
     }
 
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Inter, Helvetica, Arial, sans-serif;
       background: var(--bg);
@@ -31,10 +41,15 @@
       -webkit-font-smoothing: antialiased;
     }
 
-    a { color: var(--accent); text-decoration: none; }
-    a:hover { color: var(--accent-hover); }
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
 
-    /* Navigation */
+    a:hover {
+      color: var(--accent-hover);
+    }
+
     header {
       position: sticky;
       top: 0;
@@ -43,6 +58,7 @@
       backdrop-filter: blur(12px);
       border-bottom: 1px solid var(--border);
     }
+
     .nav-wrap {
       max-width: var(--max-w);
       margin: 0 auto;
@@ -52,6 +68,7 @@
       justify-content: space-between;
       gap: 16px;
     }
+
     .brand {
       display: flex;
       align-items: center;
@@ -61,6 +78,7 @@
       color: var(--text);
       letter-spacing: 0.02em;
     }
+
     .brand-badge {
       width: 34px;
       height: 34px;
@@ -72,25 +90,39 @@
       font-weight: 900;
       font-size: 1rem;
     }
+
     nav {
       display: flex;
       gap: 24px;
       font-size: 0.95rem;
       font-weight: 500;
     }
-    nav a { color: var(--muted); transition: color 0.15s; }
-    nav a:hover { color: var(--text); }
 
-    /* Sections */
+    nav a {
+      color: var(--muted);
+      transition: color 0.15s;
+    }
+
+    nav a:hover {
+      color: var(--text);
+    }
+
     .container {
       max-width: var(--max-w);
       margin: 0 auto;
       padding: 0 24px;
     }
-    section { padding: 72px 0; }
-    section.alt { background: var(--bg-alt); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
 
-    /* Hero */
+    section {
+      padding: 72px 0;
+    }
+
+    section.alt {
+      background: var(--bg-alt);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
     .hero {
       padding: 84px 0 64px;
       display: grid;
@@ -98,6 +130,7 @@
       gap: 44px;
       align-items: center;
     }
+
     .pill {
       display: inline-block;
       padding: 6px 14px;
@@ -110,18 +143,26 @@
       text-transform: uppercase;
       margin-bottom: 18px;
     }
+
     h1 {
       font-size: clamp(2rem, 3.6vw, 3rem);
       line-height: 1.15;
       font-weight: 800;
       margin-bottom: 18px;
     }
+
     .lead {
       color: var(--muted);
       font-size: 1.08rem;
       margin-bottom: 28px;
     }
-    .btn-row { display: flex; flex-wrap: wrap; gap: 12px; }
+
+    .btn-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
     .btn {
       display: inline-flex;
       align-items: center;
@@ -135,20 +176,24 @@
       cursor: pointer;
       transition: transform 0.15s, background 0.15s, border-color 0.15s;
     }
+
     .btn-primary {
       background: var(--accent);
       color: #14181f;
     }
+
     .btn-primary:hover {
       background: var(--accent-hover);
       color: #14181f;
       transform: translateY(-1px);
     }
+
     .btn-outline {
       background: transparent;
       color: var(--text);
       border-color: var(--border);
     }
+
     .btn-outline:hover {
       border-color: var(--accent);
       color: var(--accent);
@@ -161,52 +206,61 @@
       box-shadow: 0 24px 60px rgba(0, 0, 0, 0.45);
       cursor: zoom-in;
     }
+
     .hero-media img {
       display: block;
       width: 100%;
       height: auto;
     }
 
-    /* Stats bar */
     .stats {
       margin-top: 36px;
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       gap: 14px;
     }
+
     .stat-box {
       background: var(--card);
       border: 1px solid var(--border);
       border-radius: 12px;
       padding: 16px;
     }
+
     .stat-val {
       font-size: 1.45rem;
       font-weight: 800;
       color: var(--accent);
       line-height: 1.2;
     }
+
     .stat-label {
       font-size: 0.82rem;
       color: var(--muted);
       margin-top: 4px;
     }
 
-    /* Headings */
-    .section-head { margin-bottom: 36px; }
+    .section-head {
+      margin-bottom: 36px;
+    }
+
     .section-head h2 {
       font-size: clamp(1.55rem, 2.5vw, 2.15rem);
       font-weight: 800;
       margin-bottom: 10px;
     }
-    .section-head p { color: var(--muted); max-width: 680px; }
 
-    /* Portfolio Gallery */
+    .section-head p {
+      color: var(--muted);
+      max-width: 680px;
+    }
+
     .gallery-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 22px;
     }
+
     .gallery-card {
       background: var(--card);
       border: 1px solid var(--border);
@@ -214,10 +268,12 @@
       overflow: hidden;
       transition: transform 0.18s, border-color 0.18s;
     }
+
     .gallery-card:hover {
       transform: translateY(-3px);
       border-color: var(--accent);
     }
+
     .gallery-card img {
       display: block;
       width: 100%;
@@ -225,44 +281,43 @@
       object-fit: cover;
       cursor: zoom-in;
     }
+
     .gallery-caption {
       padding: 16px 18px;
     }
+
     .gallery-caption h3 {
       font-size: 1.05rem;
       margin-bottom: 4px;
     }
+
     .gallery-caption p {
       font-size: 0.9rem;
       color: var(--muted);
     }
 
-    /* Features & Specs */
     .grid-3 {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 20px;
     }
+
     .card {
       background: var(--card);
       border: 1px solid var(--border);
       border-radius: var(--radius);
       padding: 24px;
     }
+
     .card h3 {
       font-size: 1.08rem;
       margin-bottom: 10px;
       color: var(--text);
     }
-    .card p, .card li {
+
+    .card p {
       font-size: 0.93rem;
       color: var(--muted);
-    }
-    .card ul {
-      padding-left: 18px;
-      margin-top: 8px;
-      display: grid;
-      gap: 6px;
     }
 
     .spec-table {
@@ -274,26 +329,36 @@
       border-radius: var(--radius);
       overflow: hidden;
     }
-    .spec-table th, .spec-table td {
+
+    .spec-table th,
+    .spec-table td {
       padding: 14px 18px;
       text-align: left;
       border-bottom: 1px solid var(--border);
       font-size: 0.94rem;
     }
-    .spec-table tr:last-child th, .spec-table tr:last-child td { border-bottom: none; }
+
+    .spec-table tr:last-child th,
+    .spec-table tr:last-child td {
+      border-bottom: none;
+    }
+
     .spec-table th {
       color: var(--text);
       width: 34%;
       background: rgba(255, 255, 255, 0.02);
     }
-    .spec-table td { color: var(--muted); }
 
-    /* Support / Docs */
+    .spec-table td {
+      color: var(--muted);
+    }
+
     .steps {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 20px;
     }
+
     .step-num {
       display: inline-grid;
       place-items: center;
@@ -306,6 +371,7 @@
       margin-bottom: 12px;
       font-size: 0.9rem;
     }
+
     code {
       font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
       background: rgba(255, 255, 255, 0.07);
@@ -315,7 +381,6 @@
       color: #ffd5a6;
     }
 
-    /* Contact Box */
     .contact-card {
       background: linear-gradient(135deg, #1c242f, #171e28);
       border: 1px solid var(--border);
@@ -326,6 +391,7 @@
       gap: 32px;
       align-items: center;
     }
+
     .email-pill {
       display: inline-flex;
       align-items: center;
@@ -339,6 +405,7 @@
       color: var(--text);
       margin: 14px 0 18px;
     }
+
     .status-dot {
       width: 9px;
       height: 9px;
@@ -346,6 +413,7 @@
       background: var(--green);
       display: inline-block;
     }
+
     .contact-meta {
       background: rgba(15, 19, 24, 0.55);
       border: 1px solid var(--border);
@@ -355,16 +423,24 @@
       gap: 12px;
       font-size: 0.92rem;
     }
-    .contact-meta strong { color: var(--text); display: block; margin-bottom: 2px; }
-    .contact-meta span { color: var(--muted); }
 
-    /* Footer */
+    .contact-meta strong {
+      color: var(--text);
+      display: block;
+      margin-bottom: 2px;
+    }
+
+    .contact-meta span {
+      color: var(--muted);
+    }
+
     footer {
       border-top: 1px solid var(--border);
       padding: 28px 0;
       color: var(--muted);
       font-size: 0.88rem;
     }
+
     .footer-inner {
       display: flex;
       justify-content: space-between;
@@ -372,7 +448,6 @@
       gap: 12px;
     }
 
-    /* Lightbox */
     .lightbox {
       position: fixed;
       inset: 0;
@@ -384,7 +459,11 @@
       z-index: 100;
       cursor: zoom-out;
     }
-    .lightbox.open { display: flex; }
+
+    .lightbox.open {
+      display: flex;
+    }
+
     .lightbox img {
       max-width: 95vw;
       max-height: 90vh;
@@ -393,12 +472,27 @@
     }
 
     @media (max-width: 880px) {
-      .hero, .gallery-grid, .grid-3, .steps, .contact-card { grid-template-columns: 1fr; }
-      .stats { grid-template-columns: repeat(2, 1fr); }
-      nav { gap: 14px; font-size: 0.88rem; }
+
+      .hero,
+      .gallery-grid,
+      .grid-3,
+      .steps,
+      .contact-card {
+        grid-template-columns: 1fr;
+      }
+
+      .stats {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      nav {
+        gap: 14px;
+        font-size: 0.88rem;
+      }
     }
   </style>
 </head>
+
 <body>
 
   <header>
@@ -417,14 +511,14 @@
   </header>
 
   <main>
-    <!-- HERO -->
     <div class="container">
       <section class="hero">
         <div>
-          <span class="pill">3D Game Assets &amp; Unity Editor Tools</span>
+          <span class="pill">3D Game Assets &amp; Unity Tools</span>
           <h1>Stylized Modular 3D Environments Built for Real-Time Games</h1>
           <p class="lead">
-            <strong>Mocap</strong> is an independent 3D asset studio creating clean, game-ready low-poly modular kits, stylized props, and workflow-accelerating Unity Editor tools for indie developers and game studios.
+            <strong>Mocap</strong> is an independent 3D asset studio creating clean, game-ready low-poly modular kits,
+            stylized props, and workflow-accelerating Unity Editor tools for indie developers and game studios.
           </p>
           <div class="btn-row">
             <a href="#portfolio" class="btn btn-primary">View Work Samples</a>
@@ -450,18 +544,20 @@
           </div>
         </div>
         <div class="hero-media">
-          <img src="images/01_hero_interior.jpg" alt="Cozy Corner Shop &amp; Supermarket Modular Kit — Interior Showcase" data-lightbox />
+          <img src="images/01_hero_interior.jpg"
+            alt="Cozy Corner Shop &amp; Supermarket Modular Kit — Interior Showcase" data-lightbox />
         </div>
       </section>
     </div>
 
-    <!-- PORTFOLIO / WORK SAMPLES -->
     <section id="portfolio" class="alt">
       <div class="container">
         <div class="section-head">
           <h2>Featured Work Sample: Cozy Corner Shop &amp; Supermarket Modular Kit</h2>
           <p>
-            A complete stylized low-poly retail environment kit featuring 115 modular assets across 5 categories, custom collision meshes, 2 ready-to-play Unity demo scenes, and an automated 1-click Shelf Populator C# Editor tool. Click any render to inspect full resolution.
+            A complete stylized low-poly retail environment kit featuring 115 modular assets across 5 categories, custom
+            collision meshes, 2 ready-to-play Unity demo scenes, and an automated 1-click Shelf Populator C# Editor
+            tool. Click any render to inspect full resolution.
           </p>
         </div>
 
@@ -470,7 +566,8 @@
             <img src="images/01_hero_interior.jpg" alt="Interior Showcase — Cozy Corner Shop" data-lightbox />
             <div class="gallery-caption">
               <h3>01. Furnished Shop Interior Showcase</h3>
-              <p>Complete 8×6m corner shop interior with stocked shelving aisles, refrigerated coolers, checkout counter, espresso bar, and warm pendant lighting.</p>
+              <p>Complete 8&times;6m corner shop interior with stocked shelving aisles, refrigerated coolers, checkout
+                counter, espresso bar, and warm pendant lighting.</p>
             </div>
           </article>
 
@@ -478,7 +575,8 @@
             <img src="images/02_exterior_shopfront.jpg" alt="Exterior Shopfront — Cozy Corner Shop" data-lightbox />
             <div class="gallery-caption">
               <h3>02. Modular Exterior Shopfront</h3>
-              <p>Snap-together 2m storefront windows, hinged glass entrance door, striped awnings, neon OPEN sign, sidewalk A-frame, lamps, and exterior bench.</p>
+              <p>Snap-together 2m storefront windows, hinged glass entrance door, striped awnings, neon OPEN sign,
+                sidewalk A-frame, lamps, and exterior bench.</p>
             </div>
           </article>
 
@@ -486,7 +584,8 @@
             <img src="images/03_modular_kit_overview.jpg" alt="All 115 Modular Assets Overview Catalog" data-lightbox />
             <div class="gallery-caption">
               <h3>03. Full 115-Asset Modular Kit Overview</h3>
-              <p>20 Architecture modules, 20 Shelving &amp; Counter units, 20 Appliances &amp; POS props, 35 Grocery products, and 20 Signage &amp; Decor assets.</p>
+              <p>20 Architecture modules, 20 Shelving &amp; Counter units, 20 Appliances &amp; POS props, 35 Grocery
+                products, and 20 Signage &amp; Decor assets.</p>
             </div>
           </article>
 
@@ -494,33 +593,39 @@
             <img src="images/04_products_closeup.jpg" alt="Products, POS &amp; Appliances Close-up" data-lightbox />
             <div class="gallery-caption">
               <h3>04. Grocery Products, POS &amp; Appliances Close-up</h3>
-              <p>35 lightweight grocery &amp; bakery props (avg. 164 triangles each), touchscreen register, barcode scanner, espresso machine, and refrigerated coolers.</p>
+              <p>35 lightweight grocery &amp; bakery props (avg. 164 triangles each), touchscreen register, barcode
+                scanner, espresso machine, and refrigerated coolers.</p>
             </div>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- TECHNICAL SPECS -->
     <section id="specs">
       <div class="container">
         <div class="section-head">
           <h2>Production Standards &amp; Technical Specifications</h2>
-          <p>Every asset published by Mocap is audited for clean topology, real-world scale, zero missing references, and optimal real-time performance.</p>
+          <p>Every asset published by Mocap is audited for clean topology, real-world scale, zero missing references,
+            and optimal real-time performance.</p>
         </div>
 
         <div class="grid-3">
           <div class="card">
             <h3>Ultra-Low Draw Calls</h3>
-            <p>All 115 assets share just 3 PBR materials (Main Palette, Transparent Glass, Emissive) and two 256×256 uncompressed stylized color atlases—making mobile, VR, and desktop performance effortless.</p>
+            <p>All 115 assets share just 3 PBR materials (Main Palette, Transparent Glass, Emissive) and two
+              256&times;256 uncompressed stylized color atlases—making mobile, VR, and desktop performance effortless.
+            </p>
           </div>
           <div class="card">
             <h3>1-Click Unity C# Editor Tools</h3>
-            <p>Includes a custom <strong>Shelf &amp; Store Builder</strong> Editor window that auto-populates shelves with products (with jitter, density &amp; seed controls) and snaps modular architecture cleanly onto a 2.0m grid.</p>
+            <p>Includes a custom <strong>Shelf &amp; Store Builder</strong> Editor window that auto-populates shelves
+              with products (with jitter, density &amp; seed controls) and snaps modular architecture cleanly onto a
+              2.0m grid.</p>
           </div>
           <div class="card">
             <h3>Custom Collisions &amp; Clean Scale</h3>
-            <p>Every mesh ships at real-world <code>1:1</code> metric scale, clean pivot placement, secondary Lightmap UV2, and custom <code>UCX_</code> colliders automatically converted into Unity Box/Mesh Colliders.</p>
+            <p>Every mesh ships at real-world <code>1:1</code> metric scale, clean pivot placement, secondary Lightmap
+              UV2, and custom <code>UCX_</code> colliders automatically converted into Unity Box/Mesh Colliders.</p>
           </div>
         </div>
 
@@ -544,7 +649,8 @@
             </tr>
             <tr>
               <th>Demo Scenes</th>
-              <td><code>Demo_01_CozyShop_Showcase.unity</code> &amp; <code>Demo_02_All_115_Assets_Overview.unity</code></td>
+              <td><code>Demo_01_CozyShop_Showcase.unity</code> &amp; <code>Demo_02_All_115_Assets_Overview.unity</code>
+              </td>
             </tr>
             <tr>
               <th>Supported Engines</th>
@@ -555,7 +661,6 @@
       </div>
     </section>
 
-    <!-- DOCUMENTATION / SUPPORT -->
     <section id="support" class="alt">
       <div class="container">
         <div class="section-head">
@@ -567,23 +672,28 @@
           <div class="card">
             <div class="step-num">1</div>
             <h3>Import &amp; Match Pipeline</h3>
-            <p>Import the package into your Unity project. If you use Built-in RP or HDRP instead of URP, click <code>Tools &gt; Cozy Shop Kit &gt; Setup Shared Materials</code> to auto-convert all 3 materials instantly.</p>
+            <p>Import the package into your Unity project. If you use Built-in RP or HDRP instead of URP, click
+              <code>Tools &gt; Cozy Shop Kit &gt; Setup Shared Materials</code> to auto-convert all 3 materials
+              instantly.</p>
           </div>
           <div class="card">
             <div class="step-num">2</div>
             <h3>Build on the 2.0m Grid</h3>
-            <p>Drag prefabs from <code>Assets/CozyShopKit/Prefabs/</code> into your scene, or open <code>Tools &gt; Cozy Shop Kit &gt; Shelf &amp; Store Builder</code> to snap walls and generate modular room shells automatically.</p>
+            <p>Drag prefabs from <code>Assets/CozyShopKit/Prefabs/</code> into your scene, or open
+              <code>Tools &gt; Cozy Shop Kit &gt; Shelf &amp; Store Builder</code> to snap walls and generate modular
+              room shells automatically.</p>
           </div>
           <div class="card">
             <div class="step-num">3</div>
             <h3>Auto-Stock Shelves</h3>
-            <p>Select any <code>SM_Shelf_*</code> or cooler prefab in the Hierarchy, click <em>Auto-Find All SM_Prod_*</em> in the builder window, and click <strong>Populate Selected Shelves</strong> to stock rows in one click.</p>
+            <p>Select any <code>SM_Shelf_*</code> or cooler prefab in the Hierarchy, click <em>Auto-Find All
+                SM_Prod_*</em> in the builder window, and click <strong>Populate Selected Shelves</strong> to stock rows
+              in one click.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- CONTACT -->
     <section id="contact">
       <div class="container">
         <div class="contact-card">
@@ -591,14 +701,16 @@
             <span class="pill">Publisher Support &amp; Inquiries</span>
             <h2>Contact Mocap</h2>
             <p class="lead" style="margin-bottom: 10px;">
-              Need technical assistance, render pipeline help, bug fixes, or have a suggestion for our next modular asset pack? Reach out directly by email.
+              Need technical assistance, render pipeline help, bug fixes, or have a suggestion for our next modular
+              asset pack? Reach out directly by email.
             </p>
             <div class="email-pill">
               <span class="status-dot"></span>
               <span id="support-email">yamyam5864@hotmail.com</span>
             </div>
             <div class="btn-row">
-              <a class="btn btn-primary" href="mailto:yamyam5864@hotmail.com?subject=Mocap%20Asset%20Support">Send Support Email</a>
+              <a class="btn btn-primary" href="mailto:yamyam5864@hotmail.com?subject=Mocap%20Asset%20Support">Send
+                Support Email</a>
               <button class="btn btn-outline" type="button" id="copy-btn">Copy Email Address</button>
             </div>
           </div>
@@ -633,7 +745,6 @@
     </div>
   </footer>
 
-  <!-- Lightbox Modal -->
   <div class="lightbox" id="lightbox" aria-hidden="true">
     <img id="lightbox-img" src="" alt="Full preview" />
   </div>
@@ -641,7 +752,6 @@
   <script>
     document.getElementById("yr").textContent = new Date().getFullYear();
 
-    // Lightbox for portfolio images
     const lb = document.getElementById("lightbox");
     const lbImg = document.getElementById("lightbox-img");
     document.querySelectorAll("[data-lightbox]").forEach(img => {
@@ -654,7 +764,6 @@
     lb.addEventListener("click", () => lb.classList.remove("open"));
     document.addEventListener("keydown", e => { if (e.key === "Escape") lb.classList.remove("open"); });
 
-    // Copy email helper
     const copyBtn = document.getElementById("copy-btn");
     copyBtn.addEventListener("click", () => {
       navigator.clipboard.writeText("yamyam5864@hotmail.com").then(() => {
@@ -664,4 +773,5 @@
     });
   </script>
 </body>
+
 </html>
